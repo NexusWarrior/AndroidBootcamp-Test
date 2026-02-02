@@ -24,6 +24,7 @@ fun GradientButton(
     text: String,
     gradient: Brush,
     modifier: Modifier = Modifier,
+    enabled: Boolean,
     onClick: () -> Unit = { }
 ) {
     Box(
@@ -32,18 +33,18 @@ fun GradientButton(
             .background(
                 brush = gradient,
                 shape = RoundedCornerShape(28.dp)
-            ) // Накладываем градиент и форму
+            )
             .clip(RoundedCornerShape(28.dp)), // Обрезаем клики по форме
         contentAlignment = Alignment.Center
     ) {
-        // 2. Сама кнопка делается прозрачной
         Button(
             modifier = Modifier.fillMaxSize(),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Transparent // Прозрачный фон, чтобы видеть градиент под кнопкой
+                containerColor = Color.Transparent
             ),
-            onClick = onClick,
-            contentPadding = PaddingValues() // Убираем лишние отступы
+            contentPadding = PaddingValues(), // Убираем лишние отступы
+            enabled = enabled,
+            onClick = onClick
         ) {
             Text(
                 text = text,

@@ -3,20 +3,37 @@ package ru.example.androidcompose.ui.theme
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
-val backgroundColor1 = Color(0xFF49ABE9)
-val backgroundColor2 = Color(0xFF7A6EEB)
 val backgroundGradient = Brush.verticalGradient(
     colors = listOf(
-        backgroundColor1,
-        backgroundColor2
+        Color(0xFF49ABE9),
+        Color(0xFF7A6EEB)
     )
 )
 
-val buttonColor1 = Color(0xFF16BAD6)
-val buttonColor2 = Color(0xFF3BD1C8)
 val buttonGradient = Brush.horizontalGradient(
     colors = listOf(
-        buttonColor1,
-        buttonColor2
+        Color(0xFF16BAD6),
+        Color(0xFF3BD1C8)
+    )
+)
+
+val activityCardGradient1 = Brush.verticalGradient(
+    colors = listOf(
+        Color(0xFF10B7D9),
+        Color(0xFF3DD3C7)
+    )
+)
+
+val activityCardGradient2 = Brush.verticalGradient(
+    colors = listOf(
+        Color(0xFFF48E59),
+        Color(0xFFFAB454)
+    )
+)
+
+val activityCardGradient3 = Brush.verticalGradient(
+    colors = listOf(
+        Color(0xFF775EE4),
+        Color(0xFFCC7FEC)
     )
 )
